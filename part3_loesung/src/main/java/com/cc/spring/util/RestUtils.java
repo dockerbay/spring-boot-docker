@@ -12,26 +12,26 @@ public class RestUtils {
 
 	public static Produkt generateSampleProdukt(User user) {
 		Produkt produkt = new Produkt();
-    	produkt.setUser(user);
-    	Vertrag vertrag = new Vertrag();
-    	vertrag.setKontostand(100000);
-    	vertrag.setTarifname("SuperTollerTarif");
-    	produkt.setVertrag(vertrag);
-    	return produkt;
+		produkt.setUser(user);
+		Vertrag vertrag = new Vertrag();
+		vertrag.setKontostand(100000);
+		vertrag.setTarifname("SuperTollerTarif");
+		produkt.setVertrag(vertrag);
+		return produkt;
 	}
-	
+
 	public static User generateSampleUser() {
 		User user = new User();
-    	user.setGeschlecht(Geschlecht.MAENNLICH);
-    	Name name = new Name();
-    	name.setNachname("Mayer");
-    	name.setVorname("Frank");
-    	user.setName(name);
-    	return user;
+		user.setGeschlecht(Geschlecht.MAENNLICH);
+		Name name = new Name();
+		name.setNachname("Mayer");
+		name.setVorname("Frank");
+		user.setName(name);
+		return user;
 	}
-	
+
 	public static void printUserToCmdline() throws JsonProcessingException {
-    	ObjectMapper mapper = new ObjectMapper();
-    	System.out.println(mapper.writeValueAsString(RestUtils.generateSampleUser()));
+		ObjectMapper mapper = new ObjectMapper();
+		System.out.println(mapper.writeValueAsString(RestUtils.generateSampleUser()));
 	}
 }

@@ -2,6 +2,7 @@ package com.cc.spring.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name = "Produkt")
 public class Produkt {
 
 	private Vertrag vertrag;

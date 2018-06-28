@@ -2,11 +2,11 @@ package com.cc.spring.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name = "User")
 public class User {
 
 	private Name name;
 	private Geschlecht geschlecht;
-
 	public Name getName() {
 		return name;
 	}
